@@ -24,7 +24,7 @@ body{
 }
 
 .header{
-    width: 100%;
+    width: 100vw;
     margin: 0px 0px;
     padding: 0px 4% 0px;
     background-color: #FFF;
@@ -64,7 +64,7 @@ body{
 /*右側*/
 .header-list-right{
     position: absolute;
-    right: 53px;
+    right: 4.5%;
     line-height: 0px;
 }
 
@@ -444,7 +444,7 @@ body{
 /*カレンダー*/
 
 .calendar-main{
-    width: 800px;
+    width: 73%;
     text-align: center;
     margin: 0 auto;
     position: relative;
@@ -991,4 +991,3 @@ body{
     }
   }
 */
-
