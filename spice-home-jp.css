@@ -400,17 +400,16 @@ body{
 /*タイトル*/
 .calendar{
     text-align: center;
-    margin: 80px 80px 0px 80px;
+    margin: 80px 0px;
 }
 
 .calendar h2{
     display: inline-block;
-    font-size: 40px;
+    font-size: 3vw;
     color: #333;
     padding-bottom: 10px;
     position: relative;
 }
-
 
 .calendar h2::before{
     content: "";
@@ -424,27 +423,13 @@ body{
     transform: translateX(-50%);
 }
 
-/*
-.calendar h2.slide_on-calendar::before{
-    transition: 2s ease;
-    width: 400%;
-}
 
-.calendar h2 span{
-    display: inline-block;
-    opacity: 0;
-    transition: 1s;
-}
-
-.calendar h2.slide_on-calendar span{
-    opacity: 1;
-}
-*/
 
 /*カレンダー*/
 
 .calendar-main{
-    width: 73%;
+    width: 75%;
+    height: auto;
     text-align: center;
     margin: 0 auto;
     position: relative;
@@ -452,7 +437,7 @@ body{
 }
 
 .calendar-img li{
-    margin-left: 35px;
+    border: 2px solid red;
 }
 
 .calendar-img{
@@ -468,7 +453,7 @@ body{
     padding: 0 15px;
     cursor: pointer;
     outline: none;
-    font-size: 30px;
+    font-size: 4vw;
     color: rgba(117, 117, 117, 0.473);
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.596);
@@ -476,11 +461,11 @@ body{
 }
 
 .slick-prev-calendar{
-    left: 20px;
+    left: 5%;
 }
  
 .slick-next-calendar{
-    right: 20px;
+    right: 5%;
 }
 
 
@@ -540,12 +525,15 @@ body{
     height: 100%;
     padding-bottom: 100px;
     margin: 80px 80px 0px 80px;
+    text-align: center;
+
 }
 
 .sns-main{
     position: relative;
     overflow: hidden;
     display: flex;
+    flex-wrap: wrap;
 }
 
 /*タイトル*/
@@ -558,11 +546,22 @@ body{
     position: relative;
 }
 
+.sns h2::before{
+    content: "";
+    /*width: 0;*/
+    width: 400%;
+    height: 2px;
+    background: rgb(99, 99, 99);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /*instagram*/
 .instagram{
     width: 450px;
     height: 610px;
-    margin-left: 100px;
     background: #FFF;
     overflow-y: scroll;
     position: relative;
@@ -650,7 +649,7 @@ body{
 /*店の説明*/
 
 .about{
-    margin: 0px 80px 0px 80px;
+    margin: 0 6%;
     border-radius: 10px;
     background-color: #FFF;
     box-shadow:
@@ -661,20 +660,15 @@ body{
 }
 
 /*タイトル*/
-.about-head{
-    width: 100%;
-    height: 100%;
-    margin-top: 50px;
-}
   
-.about-head h2{
+.about h2{
     display: inline-block;
-    font-size: 40px;
+    font-size: 3vw;
     color: #333;
     padding-bottom: 10px;
     position: relative;
 } 
-.about-head h2::before{
+.about h2::before{
     content: "";
     width: 150%;
     height: 2px;
@@ -684,18 +678,16 @@ body{
     margin-left: -180%;
     transition: 0.6s;
 }
-.about-head h2 span{
+.about h2 span{
     display: inline-block;
-    padding-left: 100px;
     margin-left: -130%;
     transition: 1s;
 }
-.about-head h2.slide_on-about::before{
-    margin-left: 0;
-    left: 80px;
+.about h2.slide_on-about::before{
+    margin-left: 80px;
 }
-.about-head h2.slide_on-about span{
-    margin-left: 0;
+.about h2.slide_on-about span{
+    margin-left: 100px;
 }
 
 /*説明*/
@@ -703,20 +695,26 @@ body{
 .about-sentences{
     width: 100%;
     height: 100%;
-    font-size: 18px;
+    font-size: 1em;
     color: #333;
     margin-top: 20px;
 }
 
 .about-sentences li{
-    margin-left: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 30px;
     list-style: none;
+    transition: 2s;
 }
 
 .about-sentences li span{
     opacity: 0;
     transition: 2s;
+}
+
+.about-sentences li.slide_on-a{
+    list-style: inside;
 }
 
 .about-sentences li.slide_on-a span{
@@ -781,7 +779,7 @@ body{
 
 .profile{
     height: 100%;
-    margin: 100px 80px 0px 80px;
+    margin: 100px 80px 100px 80px;
     padding-bottom: 30px;
     border-radius: 10px;
     background-color: #FFF;
@@ -800,7 +798,7 @@ body{
 /*タイトル*/
 .profile h2{
     display: inline-block;
-    font-size: 40px;
+    font-size: 3vw;
     color: #333;
     padding-bottom: 10px;
     position: relative;
@@ -812,21 +810,19 @@ body{
     background-color: rgb(216, 190, 75);
     position: absolute;
     bottom: 0;
-    margin-left: -190%;
+    margin-left: -220%;
     transition: 0.6s;
 }
 .profile h2 span{
     display: inline-block;
-    padding-left: 100px;
-    margin-left: -140%;
+    margin-left: -160%;
     transition: 1s;
 }
 .profile h2.slide_on-profile::before{
-    margin-left: 0;
-    left: 80px;
+    margin-left: 80px;
 }
 .profile h2.slide_on-profile span{
-    margin-left: 0;
+    margin-left: 100px;
 }
 
 /*アイコン*/
@@ -851,7 +847,8 @@ body{
 .profile-sentences{
     font-size: 17px;
     color: #333;
-    margin-left: 30px;
+    margin-left: 5%;
+    margin-right: 10%;
 }
 
 .profile-sentences span{
@@ -873,25 +870,23 @@ body{
     padding: 6px;
     position: absolute;
     bottom: 0;
+    text-align: center;
 }
   
 .footer-logo{
     width: 230px;
-    font-size: 15px;
+    font-size: 1vw;
     color:rgba(44, 44, 44, 0.76);
     margin-top: 10px;
-    padding-left: 20px;
     border-top: 1px solid rgba(44, 44, 44, 0.76);
 }
 
 .footer-tel{
-    width: 130px;
-    font-size: 15px;
+    font-size: 1vw;
 }
 
 .footer-map{
-    width: 391px;
-    font-size: 15px;
+    font-size: 1vw;
 }
   
 .footer-list li{
